@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { vilane } from "@/fonts/vilane";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
+import GoToProtypeButton from "@/components/GoToPrototypeButton";
+import { biennale } from "@/fonts/Demo_Fonts/biennale";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,11 +28,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={biennale.variable}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`bg-white ${geistSans.variable} ${vilane.variable} ${biennale.variable} ${geistMono.variable} antialiased`}
       >
         <NavBar />
+        <GoToProtypeButton />
         {children}
       </body>
     </html>

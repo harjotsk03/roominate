@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+body {
+  font-family: var(--font-vilane), sans-serif;
+}
+
+.purple-button{
+  background-color: #595675;
+}
+
+.purple-main{
+  background-color: #A5A1C4;
+}
+
+@keyframes slotSpin {
+  0% {
+    transform: translateY(0) rotateX(0deg);
+    opacity: 1;
+  }
+
+  40% {
+    transform: translateY(-150%) rotateX(90deg);
+    opacity: 0;
+  }
+
+  60% {
+    transform: translateY(150%) rotateX(-90deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.slot-animate {
+  animation: slotSpin 0.6s ease-in-out;
+  transform-origin: center;
+  display: inline-block;
+}
