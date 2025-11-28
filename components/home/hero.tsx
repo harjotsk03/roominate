@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import HomePageMockup from "../../assets/homePageMockup.png";
 import calander from "../../assets/calander.png";
@@ -17,7 +18,12 @@ export default function Hero() {
             sorting items and keeping memories forever.
           </p>
 
-          <button className="font-medium flex flex-row gap-2 items-center text-black px-7 py-2.5 rounded-lg bg-stone-100 transition-all duration-500 ease-in-out hover:scale-95 hover:cursor-pointer">
+          <button
+            onClick={() => {
+              window.scrollBy({ top: 1000, behavior: "smooth" });
+            }}
+            className="font-medium flex flex-row gap-2 items-center text-black px-7 py-2.5 rounded-lg bg-stone-100 transition-all duration-500 ease-in-out hover:scale-95 hover:cursor-pointer"
+          >
             Learn More
           </button>
         </div>
