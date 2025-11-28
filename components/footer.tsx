@@ -20,6 +20,9 @@ export default function Footer() {
             <a href="/process" className="transition-opacity hover:opacity-80">
               Process
             </a>
+            <a href="/team" className="transition-opacity hover:opacity-80">
+              Team
+            </a>
             <a
               href="/prototype"
               className="transition-opacity hover:opacity-80"

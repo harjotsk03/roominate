@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import NavButton from "./NavButton";
 import Image from "next/image";
 import Logo from "../assets/logo.png";
-import { FigmaIcon, FileText, Menu, X } from "lucide-react";
+import { CircleUserRound, FigmaIcon, FileText, Menu, X } from "lucide-react";
 
 export default function NavBar() {
   const router = useRouter();
@@ -40,6 +40,15 @@ export default function NavBar() {
               <>
                 <FileText size={15} className="-mt-0.5" />
                 <p>Process</p>
+              </>
+            }
+          />
+          <NavButton
+            onClick={() => navigate("/team")}
+            text={
+              <>
+                <CircleUserRound size={15} className="-mt-0.5" />
+                <p>Team</p>
               </>
             }
           />
