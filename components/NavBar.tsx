@@ -22,7 +22,7 @@ export default function NavBar() {
         {/* Logo */}
         <button
           onClick={() => navigate("/")}
-          className="flex items-center gap-2"
+          className="flex hover:cursor-pointer items-center gap-2"
         >
           <Image
             src={Logo}

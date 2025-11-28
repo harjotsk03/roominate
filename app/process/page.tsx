@@ -6,7 +6,7 @@ export default function Process() {
   const processSteps = [
     {
       id: 1,
-      header: "Research",
+      header: "Week One: Research",
       title: "Understanding the Problem",
       description:
         "We conducted background research on hoarding disorder, ADHD-related executive dysfunction, and emotional attachment to objects.",
@@ -20,7 +20,7 @@ export default function Process() {
     },
     {
       id: 2,
-      header: "Wireframes & Mockups",
+      header: "Week Two: Wireframes & Mockups",
       title: "Designing for Calm and Clarity",
       description:
         "We translated research insights into wireframes and mockups that focused on:",
@@ -34,7 +34,7 @@ export default function Process() {
     },
     {
       id: 3,
-      header: "User Flow & Interaction",
+      header: "Week Three: User Flow & Interaction",
       title: "Supporting Different Needs",
       description: "Roominate supports multiple user paths:",
       points: [
@@ -46,7 +46,7 @@ export default function Process() {
     },
     {
       id: 4,
-      header: "Refinements",
+      header: "Week Four: Refinements",
       title: "Iterating Based on Feedback",
       description: "Based on usability testing and critique, we refined:",
       points: [
@@ -59,7 +59,6 @@ export default function Process() {
   ];
 
   const projectInfo = {
-    year: "2025",
     domain: "Organization & Cleaning",
     type: "Interface Design for a Mobile App",
     brief:
@@ -67,7 +66,7 @@ export default function Process() {
   };
 
   return (
-    <div className="w-full bg-white">
+    <div className="w-full fade-in-up bg-white">
       {/* Hero Section */}
       <div className="px-6 py-28 lg:px-20 lg:py-32 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-6xl mx-auto">
@@ -81,13 +80,7 @@ export default function Process() {
           </div>
 
           {/* Project Details Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 mt-12">
-            <div>
-              <p className="text-sm font-light text-[#595675] mb-2">Year</p>
-              <p className="text-xl font-medium text-black">
-                {projectInfo.year}
-              </p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 mt-12">
             <div>
               <p className="text-sm font-light text-[#595675] mb-2">Domain</p>
               <p className="text-xl font-medium text-black">

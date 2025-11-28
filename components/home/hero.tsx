@@ -6,14 +6,14 @@ import timer from "../../assets/timer.png";
 
 export default function Hero() {
   return (
-    <div className="pt-40 px-20">
-      <div className="flex flex-row items-end justify-between gap-10">
-        <h1 className="font-regular text-7xl w-2/3">
+    <div className="pt-28 px-6 lg:pt-40 lg:px-20">
+      <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-4 lg:gap-10">
+        <h1 className="font-regular text-4xl lg:text-7xl lg:w-2/3">
           Clean, declutter, and stay organized.
         </h1>
 
-        <div className="flex flex-col gap-4 items-end justify-end">
-          <p className="text-sm font-light text-stone-500/80 text-right max-w-sm">
+        <div className="flex flex-col gap-4 items-start lg:items-end justify-end">
+          <p className="text-base lg:text-sm font-light text-stone-500/80 lg:text-right max-w-sm">
             Take control of your space, declutter your life in sections while
             sorting items and keeping memories forever.
           </p>
@@ -30,7 +30,7 @@ export default function Hero() {
       </div>
 
       {/* Image section */}
-      <div className="relative mt-16 h-[75vh] w-full overflow-hidden rounded-t-4xl bg-gradient-to-b from-stone-100 to-transparent">
+      <div className="relative mt-10 lg:mt-16 h-[75vh] w-full overflow-hidden rounded-t-4xl bg-gradient-to-b from-stone-100 to-transparent">
         {/* Phone anchor container */}
         <div className="relative z-10 mx-auto flex h-full max-w-[420px] items-start justify-center pt-10">
           {/* Floating elements – anchored to phone */}

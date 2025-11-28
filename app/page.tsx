@@ -5,7 +5,7 @@ import ProblemSolving from "@/components/home/problemSolving";
 
 export default function Home() {
   return (
-    <div className="w-screen h-full overflow-y-scroll">
+    <div className="w-screen fade-in-up h-full overflow-y-scroll">
       <Hero />
       <ProblemSolving />
       <Features />
