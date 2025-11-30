@@ -9,7 +9,12 @@ type DonationItem = {
   description: string;
 };
 
-export default function DonationFeatures() {
+type Props = {
+  onVideoLoaded: () => void;
+};
+
+export default function DonationFeatures({ onVideoLoaded }: Props) {
+  const loadedRef = useRef<boolean[]>([]);
   const items: DonationItem[] = [
     {
       src: "/videos/Donate1.mp4",
@@ -79,7 +84,7 @@ export default function DonationFeatures() {
   };
 
   return (
-    <div className="lg:py-14 px-0 lg:px-52 flex flex-col gap-6">
+    <div className="px-0 lg:px-52 flex flex-col gap-6">
       {/* Header */}
       <div>
         <p className="text-lg font-light text-[#A5A1C4]">Drop Off Page</p>
@@ -114,8 +119,14 @@ export default function DonationFeatures() {
                 loop
                 muted
                 playsInline
+                onLoadedMetadata={() => {
+                  if (!loadedRef.current[index]) {
+                    loadedRef.current[index] = true;
+                    onVideoLoaded();
+                  }
+                }}
                 autoPlay={isMobile}
-                preload="metadata"
+                preload="auto"
                 className="w-full h-auto scale-[100.5%] lg:grayscale lg:group-hover:grayscale-0 transition-all duration-300 ease-out"
               />
 
