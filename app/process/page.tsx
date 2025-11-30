@@ -107,7 +107,7 @@ export default function Process() {
 
       {/* Overview Section */}
       <div className="px-6 lg:px-20 pt-0 pb-10 lg:py-20 bg-white border-b border-slate-100">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-1 gap-16">
           <div>
             <h2 className="text-2xl font-medium text-black mb-6">
               Why did we choose this domain?
@@ -170,32 +170,32 @@ export default function Process() {
               </span>
             </li>
           </div>
-        </div>
-        <div className="px-0 lg:px-20 pt-10 lg:pt-20 bg-white">
-          <h2 className="text-2xl font-medium text-black mb-4">
-            Why this approach?
-          </h2>
-          <p className="text-lg font-light text-black mb-4">
-            Instead of forcing decisions, Roominate emphasizes:
-          </p>
-          <li className="flex items-start gap-3 mb-4">
-            <span className="text-[#595675] mt-1">•</span>
-            <span>Emotional safety</span>
-          </li>
-          <li className="flex items-start gap-3 mb-4">
-            <span className="text-[#595675] mt-1">•</span>
-            <span>Small, achievable steps</span>
-          </li>
-          <li className="flex items-start gap-3 mb-4">
-            <span className="text-[#595675] mt-1">•</span>
-            <span>Visual progress</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-[#595675] mt-1">•</span>
-            <span>
-              Accountability through gentle reminders and session tracking
-            </span>
-          </li>
+          <div>
+            <h2 className="text-2xl font-medium text-black mb-4">
+              Why this approach?
+            </h2>
+            <p className="text-lg font-light text-black mb-4">
+              Instead of forcing decisions, Roominate emphasizes:
+            </p>
+            <li className="flex items-start gap-3 mb-4">
+              <span className="text-[#595675] mt-1">•</span>
+              <span>Emotional safety</span>
+            </li>
+            <li className="flex items-start gap-3 mb-4">
+              <span className="text-[#595675] mt-1">•</span>
+              <span>Small, achievable steps</span>
+            </li>
+            <li className="flex items-start gap-3 mb-4">
+              <span className="text-[#595675] mt-1">•</span>
+              <span>Visual progress</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-[#595675] mt-1">•</span>
+              <span>
+                Accountability through gentle reminders and session tracking
+              </span>
+            </li>
+          </div>
         </div>
       </div>
 
