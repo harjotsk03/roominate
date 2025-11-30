@@ -20,25 +20,19 @@ export default function DonationFeatures({ onVideoLoaded }: Props) {
       src: "/videos/Donate1.mp4",
       title: "1. Select Items",
       description:
-        "Users choose items to donate or discard from their cleaning sessions.",
+        "Choose items to donate or discard from the completed decluttering sessions.",
     },
     {
       src: "/videos/Donate2.mp4",
-      title: "2. Find Drop-Off Locations",
+      title: "2. Find Drop Off Locations",
       description:
-        "Nearby donation and discard locations are suggested based on the type of items selected.",
+        "Nearby donation and discard locations are displayed based on the type of items selected.",
     },
     {
       src: "/videos/Donate3.mp4",
       title: "3. Select Location",
       description:
-        "Users can select any donation or discard location and schedule a time to go drop off the items.",
-    },
-    {
-      src: "/videos/Donate3.mp4",
-      title: "4. Schedule Time",
-      description:
-        "Users can select any donation or discard location and schedule a time to go drop off the items.",
+        "Select any donation or discard location and schedule a day to drop off the items.",
     },
   ];
 
@@ -91,6 +85,11 @@ export default function DonationFeatures({ onVideoLoaded }: Props) {
         <p className="text-3xl font-medium text-black mt-1">
           Donation and Discard Items
         </p>
+        <p className="text-lg font-light text-black mt-2">
+          A map that shows all locations an item can be donated or discarded.
+          Filter visible locations by items, view the contact details and hours
+          of operation of each organization, and set a reminder to take action.
+        </p>
         <p className="flex lg:hidden text-sm font-light text-black flex flex-row items-center gap-2 mt-4">
           Click to play videos!
         </p>
@@ -101,7 +100,7 @@ export default function DonationFeatures({ onVideoLoaded }: Props) {
       </div>
 
       {/* Horizontal Scroll */}
-      <div className="flex overflow-x-scroll gap-8 pb-8">
+      <div className="flex overflow-x-scroll gap-8 lg:gap-10 pb-8 mb-16">
         {items.map((item, index) => (
           <div key={index} className="flex-none w-60 flex flex-col gap-4">
             {/* Video */}
@@ -136,7 +135,7 @@ export default function DonationFeatures({ onVideoLoaded }: Props) {
                   isMobile ? "hidden" : "group-hover:opacity-0"
                 }`}
               >
-                <div className="bg-[#595675] px-3 py-1.5 rounded-full">
+                <div className="bg-[#595675] hidden lg:flex px-3 py-1.5 rounded-full">
                   <span className="text-white text-xs font-medium tracking-wide">
                     Hover to play
                   </span>

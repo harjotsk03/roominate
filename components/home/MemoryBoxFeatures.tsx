@@ -19,15 +19,15 @@ export default function MemoryBoxFeatures({ onVideoLoaded }: Props) {
   const items: SessionItem[] = [
     {
       src: "/videos/MemoryBoxOne.mp4",
-      title: "1. Filter by Item Type",
+      title: "1. Filtering Items",
       description:
-        "Users can filter their items by the type of item, using the toggle buttons at the top of the screen.",
+        "Items can be filtered by search or item type at the top of the page with clickable toggles for easy access.",
     },
     {
       src: "/videos/MemoryBoxTwo.mp4",
-      title: "2. View Item",
+      title: "2. Viewing Items",
       description:
-        "Users can scroll through the list of items, and click any item in order to view it. Here they can delete the item if they choose.",
+        "A scrollable list shows all viewable added items. Once expanded, there are options to edit or delete.",
     },
   ];
 
@@ -73,11 +73,16 @@ export default function MemoryBoxFeatures({ onVideoLoaded }: Props) {
   };
 
   return (
-    <div className="px-0 lg:px-52 flex flex-col gap-6">
+    <div className="px-0 lg:px-52 flex flex-col gap-6 mb-16">
       {/* Header */}
       <div>
         <p className="text-lg font-light text-[#A5A1C4]">Memory Box Page</p>
         <p className="text-3xl font-medium text-black mt-1">Memory Box Items</p>
+        <p className="text-lg font-light text-black mt-2">
+          Keep a digital archive to store images and notes of the precious items
+          that you’ve decided to donate, discard, or simply preserve on your
+          device.
+        </p>
         <p className="flex lg:hidden text-sm font-light text-black flex flex-row items-center gap-2 mt-4">
           Click to play videos!
         </p>
@@ -88,7 +93,7 @@ export default function MemoryBoxFeatures({ onVideoLoaded }: Props) {
       </div>
 
       {/* Horizontal Scroll */}
-      <div className="flex overflow-x-scroll gap-8 pb-8">
+      <div className="flex overflow-x-scroll gap-8 lg:gap-10 pb-8">
         {items.map((item, index) => (
           <div key={index} className="flex-none w-60 flex flex-col gap-4">
             {/* Video */}
@@ -123,7 +128,7 @@ export default function MemoryBoxFeatures({ onVideoLoaded }: Props) {
                   isMobile ? "hidden" : "group-hover:opacity-0"
                 }`}
               >
-                <div className="bg-[#595675] px-3 py-1.5 rounded-full">
+                <div className="bg-[#595675] hidden lg:flex px-3 py-1.5 rounded-full">
                   <span className="text-white text-xs font-medium tracking-wide">
                     Hover to play
                   </span>

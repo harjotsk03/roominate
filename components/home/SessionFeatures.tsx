@@ -21,19 +21,35 @@ export default function SessionFeatures({ onVideoLoaded }: Props) {
       src: "/videos/SessionOne.mp4",
       title: "1. Begin a Session",
       description:
-        "Users choose which room and area they will clean, as well as selecting if they would like a timer and the duration of the timer.",
+        "Choose a room and area to start decluttering and set the duration of an optional timer.",
     },
     {
       src: "/videos/SessionTwo.mp4",
       title: "2. Session Tutorial",
       description:
-        "To help reduce cognative load, and stress we provide the user an initial run through of how to go through a session for success.",
+        "To help reduce cognitive load and stress, an easily accessible information icon provides a simple, step-by-step tutorial on how to complete a successful session.",
     },
     {
-      src: "/videos/SessionThree.mp4",
-      title: "3. Adding Items",
+      src: "/videos/SessionSeven.mp4",
+      title: "3. Memory Box",
       description:
-        "Users add items to donate, discard, and to their memory box while completing their session to deal with later on.",
+        "Digitally archive precious items by taking pictures and adding notes.",
+    },
+    {
+      src: "/videos/SessionFive.mp4",
+      title: "4. Discard Items",
+      description: "Save pictures and notes of items that will be discarded.",
+    },
+    {
+      src: "/videos/SessionFour.mp4",
+      title: "5. Donation Items",
+      description: "Save pictures and notes of items that will be donated.",
+    },
+    {
+      src: "/videos/SessionSix.mp4",
+      title: "6. View Session Items",
+      description:
+        "Easily view and manage added items during the session, all in one place.",
     },
   ];
 
@@ -79,14 +95,18 @@ export default function SessionFeatures({ onVideoLoaded }: Props) {
   };
 
   return (
-    <div className="px-0 lg:px-52 flex flex-col gap-6">
+    <div className="px-0 lg:px-52 flex flex-col gap-6 mb-16">
       {/* Header */}
       <div>
         <p className="text-lg font-light text-[#A5A1C4]">Home Page</p>
         <p className="text-3xl font-medium text-black mt-1">
           Declutter Session
         </p>
-        <p className="flex lg:hidden text-sm font-light text-black flex flex-row items-center gap-2 mt-4">
+        <p className="text-lg font-light text-black mt-2">
+          Our multi-feature decluttering session helps users to allocate time to
+          spend organizing their items and clean up their space.
+        </p>
+        <p className="flex lg:hidden text-sm font-light text-black flex-row items-center gap-2 mt-4">
           Click to play videos!
         </p>
         <p className="text-sm font-light text-stone-400 flex flex-row items-center gap-2 mt-1 lg:mt-4">
@@ -96,7 +116,7 @@ export default function SessionFeatures({ onVideoLoaded }: Props) {
       </div>
 
       {/* Horizontal Scroll */}
-      <div className="flex overflow-x-scroll gap-8 pb-8">
+      <div className="flex overflow-x-scroll gap-8 lg:gap-10 pb-8">
         {items.map((item, index) => (
           <div key={index} className="flex-none w-60 flex flex-col gap-4">
             {/* Video */}
@@ -131,7 +151,7 @@ export default function SessionFeatures({ onVideoLoaded }: Props) {
                   isMobile ? "hidden" : "group-hover:opacity-0"
                 }`}
               >
-                <div className="bg-[#595675] px-3 py-1.5 rounded-full">
+                <div className="bg-[#595675] hidden lg:flex px-3 py-1.5 rounded-full">
                   <span className="text-white text-xs font-medium tracking-wide">
                     Hover to play
                   </span>

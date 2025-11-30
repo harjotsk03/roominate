@@ -19,21 +19,21 @@ export default function SessionHistoryFeatures({ onVideoLoaded }: Props) {
   const items: SessionItem[] = [
     {
       src: "/videos/SessionHistoryOne.mp4",
-      title: "1. Filter History",
+      title: "1. History Filter",
       description:
-        "Users can filter what they want to find by either sessions, discard items, or donate items.",
+        "The dropdown filter can sort through the entire history of the user by either session, donate, discard, or memory items.",
     },
     {
       src: "/videos/SessionHistoryTwo.mp4",
       title: "2. View Session Items",
       description:
-        "Once inside a sessions history, users can find items based on their type or category.",
+        "Once inside a session’s history, items can be found through item type or category.",
     },
     {
       src: "/videos/SessionHistoryThree.mp4",
       title: "3. Updating Items",
       description:
-        "Users can select any item, then add/remove the item from their Memory Box, Donations, or Discard items lists. They can also update the description of the item.",
+        "Within an item selection, it can be added or removed from the donation, discard, or memory box categories. The item description can be edited or the item can be completely deleted.",
     },
   ];
 
@@ -88,6 +88,11 @@ export default function SessionHistoryFeatures({ onVideoLoaded }: Props) {
         <p className="text-3xl font-medium text-black mt-1">
           All Session and Item History
         </p>
+        <p className="text-lg font-light text-black mt-2">
+          A place to revisit past decluttering sessions and manage the items
+          within each one. View all items, edit existing ones, or delete items
+          you’ve had a change of heart on.
+        </p>
         <p className="flex lg:hidden text-sm font-light text-black flex flex-row items-center gap-2 mt-4">
           Click to play videos!
         </p>
@@ -98,7 +103,7 @@ export default function SessionHistoryFeatures({ onVideoLoaded }: Props) {
       </div>
 
       {/* Horizontal Scroll */}
-      <div className="flex overflow-x-scroll gap-8 pb-8">
+      <div className="flex overflow-x-scroll gap-8 lg:gap-10 pb-8 mb-16">
         {items.map((item, index) => (
           <div key={index} className="flex-none w-60 flex flex-col gap-4">
             {/* Video */}
@@ -133,7 +138,7 @@ export default function SessionHistoryFeatures({ onVideoLoaded }: Props) {
                   isMobile ? "hidden" : "group-hover:opacity-0"
                 }`}
               >
-                <div className="bg-[#595675] px-3 py-1.5 rounded-full">
+                <div className="bg-[#595675] hidden lg:flex px-3 py-1.5 rounded-full">
                   <span className="text-white text-xs font-medium tracking-wide">
                     Hover to play
                   </span>

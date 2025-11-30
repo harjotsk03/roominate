@@ -18,27 +18,27 @@ export default function CalendarFeatures({ onVideoLoaded }: Props) {
   const items: SessionItem[] = [
     {
       src: "/videos/CalendarOne.mp4",
-      title: "1. Select Date",
+      title: "1. Date Selection",
       description:
-        "Users can select a date at which they would like to see the items for.",
+        "Select a date to view items scheduled to donate or discard that day.",
     },
     {
       src: "/videos/CalendarTwo.mp4",
-      title: "2. Select an Item",
+      title: "2. Item Selection",
       description:
-        "From the date, users can select an item to see the date and info about the schedule they have for that item.",
+        "An item can be expanded to also view the scheduled drop off date and location.",
     },
     {
-      src: "/videos/CalendarThree.mp4",
-      title: "3. Reschedule Date",
+      src: "/videos/planning-reschedule.mov",
+      title: "3. Rescheduling",
       description:
-        "We want to allow users to be able to change the scheduled date at any time.",
+        "Within an item page, the drop off date can be rescheduled to send a reminder on another day.",
     },
     {
-      src: "/videos/CalendarFour.mp4",
+      src: "/videos/planning-item donated.mov",
       title: "4. Donated/Discarded",
       description:
-        "If the item was a donate or discard, we prove the flow to mark it as donated/discarded and it will be removed from that section, however, if in Memory Box it will remain there forever.",
+        "Once dropped off, the item can be marked off and it will disappear from the relevant donation or discard box. Items also within the memory box will not be deleted, and can be accessed in the memory box page.",
     },
   ];
 
@@ -91,6 +91,11 @@ export default function CalendarFeatures({ onVideoLoaded }: Props) {
         <p className="text-3xl font-medium text-black mt-1">
           View Scheduled Actions
         </p>
+        <p className="text-lg font-light text-black mt-2">
+          A calendar displaying all scheduled donation and discarding dates with
+          item images. Roominate will send a reminder on the scheduled day, and
+          items can be marked as dropped off or rescheduled if plans change.
+        </p>
         <p className="flex lg:hidden text-sm font-light text-black flex flex-row items-center gap-2 mt-4">
           Click to play videos!
         </p>
@@ -101,7 +106,7 @@ export default function CalendarFeatures({ onVideoLoaded }: Props) {
       </div>
 
       {/* Horizontal Scroll */}
-      <div className="flex overflow-x-scroll gap-8 pb-8">
+      <div className="flex overflow-x-scroll gap-8 lg:gap-10 pb-8">
         {items.map((item, index) => (
           <div key={index} className="flex-none w-60 flex flex-col gap-4">
             {/* Video */}
@@ -127,7 +132,12 @@ export default function CalendarFeatures({ onVideoLoaded }: Props) {
                 }}
                 autoPlay={isMobile}
                 preload="auto"
-                className="w-full h-auto scale-[100.5%] lg:grayscale lg:group-hover:grayscale-0 transition-all duration-300 ease-out"
+                className={`w-full h-auto ${
+                  item.title == "3. Rescheduling" ||
+                  item.title == "4. Donated/Discarded"
+                    ? "scale-[102.5%] mt-0.5"
+                    : "scale-[100.5%]"
+                } lg:grayscale lg:group-hover:grayscale-0 transition-all duration-300 ease-out`}
               />
 
               {/* Overlay */}
@@ -136,7 +146,7 @@ export default function CalendarFeatures({ onVideoLoaded }: Props) {
                   isMobile ? "hidden" : "group-hover:opacity-0"
                 }`}
               >
-                <div className="bg-[#595675] px-3 py-1.5 rounded-full">
+                <div className="bg-[#595675] hidden lg:flex px-3 py-1.5 rounded-full">
                   <span className="text-white text-xs font-medium tracking-wide">
                     Hover to play
                   </span>
