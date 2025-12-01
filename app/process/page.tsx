@@ -175,7 +175,7 @@ export default function Process(): React.ReactElement {
   };
 
   return (
-    <div className="w-full bg-white">
+    <div className="w-full fade-in-up bg-white">
       {/* Hero Section */}
       <div className="px-6 py-28 lg:px-20 lg:py-32 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-6xl mx-auto">
