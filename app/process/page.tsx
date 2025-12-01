@@ -1,9 +1,51 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { ChevronRight } from "lucide-react";
-import Footer from "@/components/footer";
+import Process11 from "../../assets/process11.png";
+import Process12 from "../../assets/process12.png";
+import Process13 from "../../assets/process13.png";
+import Process14 from "../../assets/process14.png";
+import Process15 from "../../assets/process15.png";
+import Process21 from "../../assets/process21.png";
+import Process22 from "../../assets/process22.png";
+import Process23 from "../../assets/process23.png";
+import Process24 from "../../assets/process24.png";
+import Process25 from "../../assets/process25.png";
+import Process26 from "../../assets/process26.png";
+import Process27 from "../../assets/process27.png";
+import Process31 from "../../assets/process31.png";
+import Process32 from "../../assets/process32.png";
+import Process33 from "../../assets/process33.png";
+import Process34 from "../../assets/process34.png";
+import Process35 from "../../assets/process35.png";
+import Process36 from "../../assets/process36.png";
+import Process37 from "../../assets/process37.png";
+import Process38 from "../../assets/process38.png";
+import Image from "next/image";
 
-export default function Process() {
-  const processSteps = [
+interface ProcessPoint {
+  text: string;
+}
+
+interface ProcessStep {
+  id: number;
+  header: string;
+  title: string;
+  description: string;
+  points: string[];
+  images: any;
+}
+
+interface ProjectInfo {
+  domain: string;
+  type: string;
+  brief: string;
+}
+
+export default function Process(): React.ReactElement {
+  // const [expandedSection, setExpandedSection] = useState<number | null>(null);
+
+  const processSteps: ProcessStep[] = [
     {
       id: 1,
       header: "Week One: Research",
@@ -17,6 +59,7 @@ export default function Process() {
         "Lack of beginner-friendly tools to ease users into decluttering",
         "Key insight: Users need both structure and emotional reassurance.",
       ],
+      images: [Process11, Process12, Process13, Process14, Process15],
     },
     {
       id: 2,
@@ -31,6 +74,15 @@ export default function Process() {
         "Minimal cognitive load per screen",
         "A complete style guide was created to maintain consistency across components, colors, and interaction states.",
       ],
+      images: [
+        Process21,
+        Process22,
+        Process23,
+        Process24,
+        Process25,
+        Process26,
+        Process27,
+      ],
     },
     {
       id: 3,
@@ -40,8 +92,18 @@ export default function Process() {
       points: [
         "Beginners can follow full guided sessions with timers",
         "Experienced users can skim, skip, or manage items quickly",
-        "“Unsure” items ease decision anxiety",
+        "Unsure items ease decision anxiety",
         "Memory Box allows users to part with items while preserving meaning",
+      ],
+      images: [
+        Process32,
+        Process33,
+        Process31,
+        Process34,
+        Process35,
+        Process36,
+        Process37,
+        Process38,
       ],
     },
     {
@@ -55,18 +117,23 @@ export default function Process() {
         "Donation flow with map and list views",
         "Reduced visual noise to prevent overwhelm",
       ],
+      images: [],
     },
   ];
 
-  const projectInfo = {
+  const projectInfo: ProjectInfo = {
     domain: "Organization & Cleaning",
     type: "Interface Design for a Mobile App",
     brief:
       "Research, propose, design, prototype, evaluate and refine an interactive system designed for a specific domain and context.",
   };
 
+  // const handleExpandSection = (stepId: number): void => {
+  //   setExpandedSection(expandedSection === stepId ? null : stepId);
+  // };
+
   return (
-    <div className="w-full fade-in-up bg-white">
+    <div className="w-full bg-white">
       {/* Hero Section */}
       <div className="px-6 py-28 lg:px-20 lg:py-32 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-6xl mx-auto">
@@ -105,100 +172,6 @@ export default function Process() {
         </div>
       </div>
 
-      {/* Overview Section */}
-      <div className="px-6 lg:px-20 pt-0 pb-10 lg:py-20 bg-white border-b border-slate-100">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-1 gap-16">
-          <div>
-            <h2 className="text-2xl font-medium text-black mb-6">
-              Why did we choose this domain?
-            </h2>
-            <ul className="space-y-3 text-lg font-light text-black">
-              <li className="flex items-start gap-3">
-                <span className="text-[#595675] mt-1">•</span>
-                <span>
-                  Hoarding and chronic clutter can lead to unsafe, distressing,
-                  and emotionally overwhelming living environments
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[#595675] mt-1">•</span>
-                <span>
-                  Individuals with hoarding disorder and ADHD often lack tools
-                  that support structured, self-guided decluttering
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[#595675] mt-1">•</span>
-                <span>
-                  Existing solutions focus on end results, not the emotional
-                  difficulty of letting go
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-[#595675] mt-1">•</span>
-                <span>
-                  Research shows structured programs can reduce hoarding
-                  behaviors by up to 40%, yet no standalone app supports this
-                  process independently
-                </span>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2 className="text-2xl font-medium text-black mb-6">
-              What are we making to solve this problem?
-            </h2>
-            <p className="text-lg font-light text-black mb-4">
-              Roominate is a guided decluttering app that helps users:
-            </p>
-            <li className="flex items-start gap-3 mb-4">
-              <span className="text-[#595675] mt-1">•</span>
-              <span>Reflect on sentimental value without pressure</span>
-            </li>
-            <li className="flex items-start gap-3 mb-4">
-              <span className="text-[#595675] mt-1">•</span>
-              <span>Work through items at their own pace</span>
-            </li>
-            <li className="flex items-start gap-3 mb-4">
-              <span className="text-[#595675] mt-1">•</span>
-              <span>Store memories digitally in a Memory Box</span>
-            </li>
-            <li className="flex items-start gap-3 mb-4">
-              <span className="text-[#595675] mt-1">•</span>
-              <span>
-                Decide whether to keep, donate, discard, or revisit later
-              </span>
-            </li>
-          </div>
-          <div>
-            <h2 className="text-2xl font-medium text-black mb-4">
-              Why this approach?
-            </h2>
-            <p className="text-lg font-light text-black mb-4">
-              Instead of forcing decisions, Roominate emphasizes:
-            </p>
-            <li className="flex items-start gap-3 mb-4">
-              <span className="text-[#595675] mt-1">•</span>
-              <span>Emotional safety</span>
-            </li>
-            <li className="flex items-start gap-3 mb-4">
-              <span className="text-[#595675] mt-1">•</span>
-              <span>Small, achievable steps</span>
-            </li>
-            <li className="flex items-start gap-3 mb-4">
-              <span className="text-[#595675] mt-1">•</span>
-              <span>Visual progress</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-[#595675] mt-1">•</span>
-              <span>
-                Accountability through gentle reminders and session tracking
-              </span>
-            </li>
-          </div>
-        </div>
-      </div>
-
       {/* Process Steps */}
       <div className="px-6 lg:px-20 py-10 lg:py-20">
         <div className="max-w-6xl mx-auto">
@@ -212,38 +185,58 @@ export default function Process() {
           </div>
 
           <div className="space-y-0 mb-20">
-            {processSteps.map((step, index) => (
+            {processSteps.map((step: ProcessStep) => (
               <div
                 key={step.id}
                 className="border-b border-slate-200 last:border-b-0"
               >
-                <div className="py-10 lg:py-12 grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12 items-start">
-                  <div>
-                    <p className="text-sm font-light text-[#595675] mb-1">
-                      {step.header}
-                    </p>
-                    <h3 className="text-2xl font-medium text-black">
-                      {step.title}
-                    </h3>
-                  </div>
-                  <div className="col-span-2">
-                    <p className="text-lg font-light text-black mb-6">
-                      {step.description}
-                    </p>
-                    <ul className="space-y-2">
-                      {step.points.map((point, idx) => (
-                        <li
-                          key={idx}
-                          className="flex items-start gap-3 text-base font-light text-[#595675]"
-                        >
-                          <ChevronRight
-                            size={18}
-                            className="mt-0.5 flex-shrink-0"
-                          />
-                          <span>{point}</span>
-                        </li>
-                      ))}
-                    </ul>
+                <div className="py-10 lg:py-12">
+                  {/* Header and Content */}
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12 items-start mb-8">
+                    <div>
+                      <p className="text-sm font-light text-[#595675] mb-1">
+                        {step.header}
+                      </p>
+                      <h3 className="text-2xl font-medium text-black">
+                        {step.title}
+                      </h3>
+                    </div>
+                    <div className="col-span-2">
+                      <p className="text-lg font-light text-black mb-6">
+                        {step.description}
+                      </p>
+                      <ul className="space-y-2">
+                        {step.points.map((point: string, idx: number) => (
+                          <li
+                            key={idx}
+                            className="flex items-start gap-3 text-base font-light text-[#595675]"
+                          >
+                            <ChevronRight
+                              size={18}
+                              className="mt-0.5 flex-shrink-0"
+                            />
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="mt-10">
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4">
+                          {step.images.map((image: string, idx: number) => (
+                            <div
+                              key={idx}
+                              className="aspect-square overflow-hidden rounded-lg relative"
+                            >
+                              <Image
+                                src={image}
+                                alt={`${step.title} - Image ${idx + 1}`}
+                                fill
+                                className="object-contain object-top"
+                              />
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -251,23 +244,6 @@ export default function Process() {
           </div>
         </div>
       </div>
-
-      {/* Future Opportunities */}
-      {/* <div className="px-20 py-20 bg-slate-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-medium text-black mb-6">
-            Future Opportunities
-          </h2>
-          <p className="text-lg font-light text-black">
-            There are additional opportunities that we could pursue, such as
-            expanding to other vehicles (boats, motorbikes), as well as
-            exploring different types of interaction (motion, voice) in a car
-            maintenance environment.
-          </p>
-        </div>
-      </div> */}
-
-      <Footer />
     </div>
   );
 }
