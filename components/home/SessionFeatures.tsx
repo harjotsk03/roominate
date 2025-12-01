@@ -36,14 +36,14 @@ export default function SessionFeatures({ onVideoLoaded }: Props) {
         "Digitally archive precious items by taking pictures and adding notes.",
     },
     {
-      src: "/videos/SessionFive.mp4",
-      title: "4. Discard Items",
-      description: "Save pictures and notes of items that will be discarded.",
+      src: "/videos/SessionFour.mp4",
+      title: "4. Donation Items",
+      description: "Save pictures and notes of items that will be donated.",
     },
     {
-      src: "/videos/SessionFour.mp4",
-      title: "5. Donation Items",
-      description: "Save pictures and notes of items that will be donated.",
+      src: "/videos/SessionFive.mp4",
+      title: "5. Discard Items",
+      description: "Save pictures and notes of items that will be discarded.",
     },
     {
       src: "/videos/SessionSix.mp4",
