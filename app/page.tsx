@@ -5,6 +5,8 @@ import Hero from "@/components/home/hero";
 import ProblemSolving from "@/components/home/problemSolving";
 import { useState } from "react";
 import LoadingScreen from "../components/LoadingScreen";
+import { KeyBenefits } from "@/components/home/KeyBenefits";
+import { CTASection } from "@/components/home/CTASection";
 
 export default function Home() {
   const TOTAL_VIDEOS = 14;
@@ -17,7 +19,9 @@ export default function Home() {
       <div className="fade-in-up h-full overflow-y-scroll">
         <Hero />
         <ProblemSolving />
+        <KeyBenefits />
         <Features onVideoLoaded={() => setLoadedCount((c) => c + 1)} />
+        <CTASection />
         <Footer />
       </div>
     </>

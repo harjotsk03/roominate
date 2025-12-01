@@ -95,7 +95,7 @@ export default function SessionFeatures({ onVideoLoaded }: Props) {
   };
 
   return (
-    <div className="px-0 lg:px-52 flex flex-col gap-6 mb-16">
+    <div className="px-0 lg:px-0 flex flex-col gap-6 mb-16">
       {/* Header */}
       <div>
         <p className="text-lg font-light text-[#A5A1C4]">Home Page</p>
