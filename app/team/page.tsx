@@ -18,35 +18,35 @@ export default function Team () {
             </div>
           </div>
         </div>
-        <div className="py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-x-8 lg:gap-y-14">
+        <div className="py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-x-8 lg:gap-y-14">
           <div className="flex flex-col items-center">
-            <div className="w-40 h-auto rounded-full overflow-hidden">
+            {/* <div className="w-40 h-auto rounded-full overflow-hidden">
               <Image alt="Harjot Singh" src={stockPerson} />
-            </div>
+            </div> */}
             <p className="mt-4 font-medium text-xl">Allison Lee</p>
           </div>
           <div className="flex flex-col items-center">
-            <div className="w-40 h-auto rounded-full overflow-hidden">
+            {/* <div className="w-40 h-auto rounded-full overflow-hidden">
               <Image alt="Harjot Singh" src={stockPerson} />
-            </div>
+            </div> */}
             <p className="mt-4 font-medium text-xl">Andrea Park</p>
           </div>
           <div className="flex flex-col items-center">
-            <div className="w-40 h-auto rounded-full overflow-hidden">
+            {/* <div className="w-40 h-auto rounded-full overflow-hidden">
               <Image alt="Harjot Singh" src={stockPerson} />
-            </div>
+            </div> */}
             <p className="mt-4 font-medium text-xl">Arousha Mohammad-Hassani</p>
           </div>
           <div className="flex flex-col items-center">
-            <div className="w-40 h-auto rounded-full overflow-hidden">
+            {/* <div className="w-40 h-auto rounded-full overflow-hidden">
               <Image alt="Harjot Singh" src={HarjotSinghImage} />
-            </div>
+            </div> */}
             <p className="mt-4 font-medium text-xl">Harjot Singh</p>
           </div>
           <div className="flex flex-col items-center">
-            <div className="w-40 h-auto rounded-full overflow-hidden">
+            {/* <div className="w-40 h-auto rounded-full overflow-hidden">
               <Image alt="Harjot Singh" src={stockPerson} />
-            </div>
+            </div> */}
             <p className="mt-4 font-medium text-xl">Lih Chin Yeo (Rachel)</p>
           </div>
         </div>
