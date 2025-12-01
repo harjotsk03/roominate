@@ -310,36 +310,77 @@ export default function Process(): React.ReactElement {
                   </span>
                 </li>
               </ul>
-              <p className="text-base font-light text-black mb-1 mt-8">
-                We conducted user research with 8 individuals ranging from ages
-                22-70. In-person interviews within their residences were
-                prioritized to recreate a realistic decluttering process. Our
-                testing scope was the entire app user flow and an exploration of
-                all the features, with a provided user scenario so users had a
-                goal to attempt to accomplish. The methods we used were direct
-                observation, the think aloud method, and constructive
-                interaction.
+              <p className="text-base font-light text-stone-500 mb-1 mt-8">
+                We conducted{" "}
+                <span className="text-black font-semibold">user research</span>{" "}
+                with 8 individuals ranging from ages 22-70.{" "}
+                <span className="text-black font-semibold">
+                  In-person interviews
+                </span>{" "}
+                within their residences were prioritized to recreate a{" "}
+                <span className="text-black font-semibold">
+                  realistic decluttering process
+                </span>
+                . Our{" "}
+                <span className="text-black font-semibold">testing scope</span>{" "}
+                was the entire app{" "}
+                <span className="text-black font-semibold">user flow</span> and
+                an exploration of all the features, with a provided{" "}
+                <span className="text-black font-semibold">user scenario</span>{" "}
+                so users had a goal to attempt to accomplish. The{" "}
+                <span className="text-black font-semibold">methods</span> we
+                used were{" "}
+                <span className="text-black font-semibold">
+                  direct observation, the think aloud method, and constructive
+                  interaction
+                </span>
+                .
               </p>
             </StickySection>
 
             {/* Usability Testing - Design Issues */}
             <StickySection header="Usability Testing" title="Design Issues">
-              <p className="text-base font-light text-black mb-1">
-                We encountered two different types of problems: usability and
-                user-experience issues.
+              <p className="text-base font-light text-stone-500 mb-1">
+                We encountered two different types of problems:{" "}
+                <span className="text-black font-semibold">
+                  usability and user-experience issues
+                </span>
+                .
               </p>
-              <p className="text-base font-light text-black mb-1 mt-8">
-                The usability issues were problems that dealt with efficiency,
-                intuitiveness, and effectiveness in helping users complete a
-                task. We encountered two minor issues that caused confusion and
-                anxiety. The first issue was the confusion between the category
-                icon selections and the room selection dropdown. Why users would
-                'select a room' after selecting a room category was not clear.
-                This lack of differentiation lead to confusion and obscurity.
-                The second issue was with the look of the timer. The constantly
-                circulating, progress-indicating visual was stressful and
-                anxiety-inducing. The usability of the user was affected because
-                it caused the user to be in an uncomfortable state.
+              <p className="text-base font-light text-stone-500 mb-1 mt-8">
+                The{" "}
+                <span className="text-black font-semibold">
+                  usability issues
+                </span>{" "}
+                were problems that dealt with{" "}
+                <span className="text-black font-semibold">
+                  efficiency, intuitiveness, and effectiveness
+                </span>{" "}
+                in helping users complete a task. We encountered two minor
+                issues that caused confusion and anxiety. The first issue was
+                the{" "}
+                <span className="text-black font-semibold">
+                  confusion between the category icon selections and the room
+                  selection dropdown
+                </span>
+                . Why users would 'select a room' after selecting a room
+                category was not clear. This{" "}
+                <span className="text-black font-semibold">
+                  lack of differentiation
+                </span>{" "}
+                lead to confusion and obscurity. The second issue was with the{" "}
+                <span className="text-black font-semibold">
+                  look of the timer
+                </span>
+                . The constantly circulating, progress-indicating visual was
+                stressful and{" "}
+                <span className="text-black font-semibold">
+                  anxiety-inducing
+                </span>
+                . The{" "}
+                <span className="text-black font-semibold">usability</span> of
+                the user was affected because it caused the user to be in an
+                uncomfortable state.
               </p>
               <div className="mt-10">
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4">
@@ -361,15 +402,35 @@ export default function Process(): React.ReactElement {
                   </div>
                 </div>
               </div>
-              <p className="text-base font-light text-black mb-1 mt-8">
-                The user-experiences issues were problems that dealt with
-                understanding, the user journey, and the work flow of our app.
-                Our one major issue that arose was understanding the concepts of
-                the 'Unsure Items' and the 'Memory Box'. It lacked explanation
-                and context, and the user didn't know what they meant or what to
-                do with them. They also virtually had the same function as the
-                interaction for both were the same. The goal of our app was
-                compromised, and our main feature was not simple to understand.
+              <p className="text-base font-light text-stone-500 mb-1 mt-8">
+                The{" "}
+                <span className="text-black font-semibold">
+                  user-experience issues
+                </span>{" "}
+                were problems that dealt with{" "}
+                <span className="text-black font-semibold">
+                  understanding, the user journey, and the work flow
+                </span>{" "}
+                of our app. Our one major issue that arose was{" "}
+                <span className="text-black font-semibold">
+                  understanding the concepts of the 'Unsure Items' and the
+                  'Memory Box'
+                </span>
+                . It{" "}
+                <span className="text-black font-semibold">
+                  lacked explanation and context
+                </span>
+                , and the user didn't know what they meant or what to do with
+                them. They also virtually had the same function as the
+                interaction for both were the same. The{" "}
+                <span className="text-black font-semibold">
+                  goal of our app was compromised
+                </span>
+                , and our{" "}
+                <span className="text-black font-semibold">
+                  main feature was not simple to understand
+                </span>
+                .
               </p>
               <div className="mt-10">
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4">
@@ -387,12 +448,25 @@ export default function Process(): React.ReactElement {
 
             {/* Usability Testing - Design Solutions */}
             <StickySection header="Usability Testing" title="Design Solutions">
-              <p className="text-base font-light text-black mb-1">
-                To combat the usability issues, we made the room selection
-                process intuitive and clarified the titles. Once the user
-                selected a category, then a space selection would show up.
-                Example text would show the purpose of the space, such as 'Main
-                Bedroom'.
+              <p className="text-base font-light text-stone-500 mb-1">
+                To combat the{" "}
+                <span className="text-black font-semibold">
+                  usability issues
+                </span>
+                , we made the{" "}
+                <span className="text-black font-semibold">
+                  room selection process intuitive
+                </span>{" "}
+                and{" "}
+                <span className="text-black font-semibold">
+                  clarified the titles
+                </span>
+                . Once the user selected a category, then a{" "}
+                <span className="text-black font-semibold">
+                  space selection
+                </span>{" "}
+                would show up. Example text would show the purpose of the space,
+                such as 'Main Bedroom'.
               </p>
               <div className="mt-10">
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4">
@@ -414,10 +488,20 @@ export default function Process(): React.ReactElement {
                   </div>
                 </div>
               </div>
-              <p className="text-base font-light text-black mb-1 mt-8">
-                We removed the large, circulating visual for the anxiety-
-                inducing timer. It has been replaced with a non-intrusive,
-                simple timer that still indicates the progress completed.
+              <p className="text-base font-light text-stone-500 mb-1 mt-8">
+                We removed the{" "}
+                <span className="text-black font-semibold">
+                  large, circulating visual
+                </span>{" "}
+                for the{" "}
+                <span className="text-black font-semibold">
+                  anxiety-inducing timer
+                </span>
+                . It has been replaced with a{" "}
+                <span className="text-black font-semibold">
+                  non-intrusive, simple timer
+                </span>{" "}
+                that still indicates the progress completed.
               </p>
               <div className="mt-10">
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4">
@@ -431,16 +515,40 @@ export default function Process(): React.ReactElement {
                   </div>
                 </div>
               </div>
-              <p className="text-base font-light text-black mb-1 mt-8">
-                Lastly, we fixed our user-experience issue by renaming and
-                separating the functions for differentiation. 'Unsure Items' has
-                been separated and renamed into the 'Donation Box' and the
-                'Discard Box'. The naming conventions are more clear, and their
-                purposes are reflected. For further understanding, we've added a
-                simple info icon that explains the purpose of each function. The
-                'Memory Box' will function as a digital archive for items users
-                have decided to let go. Previously, 'Unsure Items' could be in
-                the 'Memory Box', and vice versa.
+              <p className="text-base font-light text-stone-500 mb-1 mt-8">
+                Lastly, we fixed our{" "}
+                <span className="text-black font-semibold">
+                  user-experience issue
+                </span>{" "}
+                by{" "}
+                <span className="text-black font-semibold">
+                  renaming and separating the functions
+                </span>{" "}
+                for differentiation. 'Unsure Items' has been{" "}
+                <span className="text-black font-semibold">
+                  separated and renamed
+                </span>{" "}
+                into the{" "}
+                <span className="text-black font-semibold">
+                  'Donation Box' and the 'Discard Box'
+                </span>
+                . The{" "}
+                <span className="text-black font-semibold">
+                  naming conventions are more clear
+                </span>
+                , and their purposes are reflected. For further understanding,
+                we've added a{" "}
+                <span className="text-black font-semibold">
+                  simple info icon
+                </span>{" "}
+                that explains the purpose of each function. The '
+                <span className="text-black font-semibold">Memory Box</span>'
+                will function as a{" "}
+                <span className="text-black font-semibold">
+                  digital archive
+                </span>{" "}
+                for items users have decided to let go. Previously, 'Unsure
+                Items' could be in the 'Memory Box', and vice versa.
               </p>
               <div className="mt-10">
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4">
