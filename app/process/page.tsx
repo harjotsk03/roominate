@@ -21,6 +21,14 @@ import Process35 from "../../assets/process35.png";
 import Process36 from "../../assets/process36.png";
 import Process37 from "../../assets/process37.png";
 import Process38 from "../../assets/process38.png";
+import Process51 from "../../assets/Process51.png";
+import Process52 from "../../assets/Process52.png";
+import Process53 from "../../assets/Process53.png";
+import Process54 from "../../assets/Process54.png";
+import Process55 from "../../assets/Process55.png";
+import Process56 from "../../assets/Process56.png";
+import Process57 from "../../assets/Process57.png";
+import Process58 from "../../assets/Process58.png";
 import Image from "next/image";
 
 interface ProcessPoint {
@@ -68,6 +76,7 @@ export default function Process(): React.ReactElement {
       description:
         "We translated research insights into wireframes and mockups that focused on:",
       points: [
+        "Realistic, user-centered goals",
         "Clear step-by-step decluttering sessions",
         "Large, readable typography and soft visuals",
         "Encouraging but non-judgmental language",
@@ -108,7 +117,7 @@ export default function Process(): React.ReactElement {
     },
     {
       id: 4,
-      header: "Week Four: Refinements",
+      header: "Week Four: Mockups & Usability",
       title: "Iterating Based on Feedback",
       description: "Based on usability testing and critique, we refined:",
       points: [
@@ -116,6 +125,21 @@ export default function Process(): React.ReactElement {
         "Memory Box layout for emotional clarity",
         "Donation flow with map and list views",
         "Reduced visual noise to prevent overwhelm",
+      ],
+      images: [],
+    },
+    {
+      id: 5,
+      header: "Week Five: Refinements & Final App",
+      title: "Adding the Details",
+      description: "Based on usability testing and critique, we refined:",
+      points: [
+        "Modified titles and text for understanding",
+        "Integrated a simple tutorial to virtually erase the learning curve",
+        "Separated ‘Unsure Items’ into ‘Donation/Discard Items’ for clarity",
+        "Created interactivity between the map and items for practicality",
+        "Refined our categorization tabs for quick navigation",
+        "Added a calendar page for intuitive viewing",
       ],
       images: [],
     },
@@ -241,6 +265,276 @@ export default function Process(): React.ReactElement {
                 </div>
               </div>
             ))}
+            <div className="border-b border-slate-200 last:border-b-0">
+              <div className="py-10 lg:py-12">
+                {/* Header and Content */}
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12 items-start mb-8">
+                  <div>
+                    <p className="text-sm font-light text-[#595675] mb-1">
+                      Usability Testing
+                    </p>
+                    <h3 className="text-2xl font-medium text-black">
+                      Research Overview
+                    </h3>
+                  </div>
+                  <div className="col-span-2">
+                    {/* <p className="text-lg font-light text-black mb-6">
+                      
+                    </p> */}
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-3 text-base font-light text-[#595675]">
+                        <ChevronRight
+                          size={18}
+                          className="mt-0.5 flex-shrink-0"
+                        />
+                        <span>
+                          Conducted user research with 8 individuals (ages
+                          22-70)
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-3 text-base font-light text-[#595675]">
+                        <ChevronRight
+                          size={18}
+                          className="mt-0.5 flex-shrink-0"
+                        />
+                        <span>
+                          Prioritized in-person interviews within their
+                          residences to recreate a realistic decluttering
+                          process
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-3 text-base font-light text-[#595675]">
+                        <ChevronRight
+                          size={18}
+                          className="mt-0.5 flex-shrink-0"
+                        />
+                        <span>
+                          Testing scope: user flow from start to finish;
+                          exploration of all features
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-3 text-base font-light text-[#595675]">
+                        <ChevronRight
+                          size={18}
+                          className="mt-0.5 flex-shrink-0"
+                        />
+                        <span>
+                          User scenario was provided so users had a goal to
+                          accomplish
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-3 text-base font-light text-[#595675]">
+                        <ChevronRight
+                          size={18}
+                          className="mt-0.5 flex-shrink-0"
+                        />
+                        <span>
+                          Methods used: direct observation, the think aloud
+                          method, and constructive interaction
+                        </span>
+                      </li>
+                    </ul>
+
+                    <p className="text-base font-light text-black mb-1 mt-8">
+                      We conducted user research with 8 individuals ranging from
+                      ages 22-70. In-person interviews within their residences
+                      were prioritized to recreate a realistic decluttering
+                      process. Our testing scope was the entire app user flow
+                      and an exploration of all the features, with a provided
+                      user scenario so users had a goal to attempt to
+                      accomplish. The methods we used were direct observation,
+                      the think aloud method, and constructive interaction.
+                    </p>
+                    {/* <div className="mt-10">
+                      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4">
+                        <div className="aspect-square overflow-hidden rounded-lg relative">
+                          <Image
+                            src={""}
+                            alt="dad"
+                            fill
+                            className="object-contain object-top"
+                          />
+                        </div>
+                      </div>
+                    </div> */}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="border-b border-slate-200 last:border-b-0">
+              <div className="py-10 lg:py-12">
+                {/* Header and Content */}
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12 items-start mb-8">
+                  <div>
+                    <p className="text-sm font-light text-[#595675] mb-1">
+                      Usability Testing
+                    </p>
+                    <h3 className="text-2xl font-medium text-black">
+                      Design Issues
+                    </h3>
+                  </div>
+                  <div className="col-span-2">
+                    <p className="text-base font-light text-black mb-1">
+                      We encountered two different types of problems: usability
+                      and user-experience issues.
+                    </p>
+                    <p className="text-base font-light text-black mb-1 mt-8">
+                      The usability issues were problems that dealt with
+                      efficiency, intuitiveness, and effectiveness in helping
+                      users complete a task. We encountered two minor issues
+                      that caused confusion and anxiety. The first issue was the
+                      confusion between the category icon selections and the
+                      room selection dropdown. Why users would ‘select a room’
+                      after selecting a room category was not clear. This lack
+                      of differentiation lead to confusion and obscurity. The
+                      second issue was with the look of the timer. The
+                      constantly circulating, progress-indicating visual was
+                      stressful and anxiety-inducing. The usability of the user
+                      was affected because it caused the user to be in an
+                      uncomfortable state.
+                    </p>
+                    <div className="mt-10">
+                      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4">
+                        <div className="aspect-square overflow-hidden rounded-lg relative">
+                          <Image
+                            src={Process51}
+                            alt="dad"
+                            fill
+                            className="object-contain object-top"
+                          />
+                        </div>
+                        <div className="aspect-square overflow-hidden rounded-lg relative">
+                          <Image
+                            src={Process52}
+                            alt="dad"
+                            fill
+                            className="object-contain object-top"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-base font-light text-black mb-1 mt-8">
+                      The user-experiences issues were problems that dealt with
+                      understanding, the user journey, and the work flow of our
+                      app. Our one major issue that arose was understanding the
+                      concepts of the ‘Unsure Items’ and the ‘Memory Box’. It
+                      lacked explanation and context, and the user didn’t know
+                      what they meant or what to do with them. They also
+                      virtually had the same function as the interaction for
+                      both were the same. The goal of our app was compromised,
+                      and our main feature was not simple to understand.
+                    </p>
+                    <div className="mt-10">
+                      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4">
+                        <div className="aspect-square overflow-hidden rounded-lg relative">
+                          <Image
+                            src={Process53}
+                            alt="dad"
+                            fill
+                            className="object-contain object-top"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="border-b border-slate-200 last:border-b-0">
+              <div className="py-10 lg:py-12">
+                {/* Header and Content */}
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12 items-start mb-8">
+                  <div>
+                    <p className="text-sm font-light text-[#595675] mb-1">
+                      Usability Testing
+                    </p>
+                    <h3 className="text-2xl font-medium text-black">
+                      Design Solutions
+                    </h3>
+                  </div>
+                  <div className="col-span-2">
+                    <p className="text-base font-light text-black mb-1">
+                      To combat the usability issues, we made the room selection
+                      process intuitive and clarified the titles. Once the user
+                      selected a category, then a space selection would show up.
+                      Example text would show the purpose of the space, such as
+                      ‘Main Bedroom’.
+                    </p>
+                    <div className="mt-10">
+                      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4">
+                        <div className="aspect-square overflow-hidden rounded-lg relative">
+                          <Image
+                            src={Process54}
+                            alt="dad"
+                            fill
+                            className="object-contain object-top"
+                          />
+                        </div>
+                        <div className="aspect-square overflow-hidden rounded-lg relative">
+                          <Image
+                            src={Process55}
+                            alt="dad"
+                            fill
+                            className="object-contain object-top"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-base font-light text-black mb-1 mt-8">
+                      We removed the large, circulating visual for the
+                      anxiety-inducing timer. It has been replaced with a
+                      non-intrusive, simple timer that still indicates the
+                      progress completed.
+                    </p>
+                    <div className="mt-10">
+                      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4">
+                        <div className="aspect-square overflow-hidden rounded-lg relative">
+                          <Image
+                            src={Process56}
+                            alt="dad"
+                            fill
+                            className="object-contain object-top"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-base font-light text-black mb-1 mt-8">
+                      Lastly, we fixed our user-experience issue by renaming and
+                      separating the functions for differentiation. ‘Unsure
+                      Items’ has been separated and renamed into the ‘Donation
+                      Box’ and the ‘Discard Box’. The naming conventions are
+                      more clear, and their purposes are reflected. For further
+                      understanding, we’ve added a simple info icon that
+                      explains the purpose of each function. The ‘Memory Box’
+                      will function as a digital archive for items users have
+                      decided to let go. Previously, ‘Unsure Items’ could be in
+                      the ‘Memory Box’, and vice versa.
+                    </p>
+                    <div className="mt-10">
+                      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4">
+                        <div className="aspect-square overflow-hidden rounded-lg relative">
+                          <Image
+                            src={Process57}
+                            alt="dad"
+                            fill
+                            className="object-contain object-top"
+                          />
+                        </div>
+                        <div className="aspect-square overflow-hidden rounded-lg relative">
+                          <Image
+                            src={Process58}
+                            alt="dad"
+                            fill
+                            className="object-contain object-top"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
