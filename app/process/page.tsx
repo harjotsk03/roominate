@@ -251,7 +251,6 @@ export default function Process(): React.ReactElement {
                     </li>
                   ))}
                 </ul>
-                // In your image rendering section:
                 {step.images.length > 0 && (
                   <div className="mt-10">
                     <div
@@ -261,7 +260,9 @@ export default function Process(): React.ReactElement {
                         <div
                           key={idx}
                           className={`aspect-square overflow-hidden rounded-lg relative ${
-                            image === Process27
+                            image === Process27 ||
+                            image === Process32 ||
+                            image === Process33
                               ? "col-span-2 mt-10 mb-0 pb-0"
                               : ""
                           }`}
