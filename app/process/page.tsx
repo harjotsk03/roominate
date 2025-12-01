@@ -251,13 +251,20 @@ export default function Process(): React.ReactElement {
                     </li>
                   ))}
                 </ul>
+                // In your image rendering section:
                 {step.images.length > 0 && (
                   <div className="mt-10">
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4">
+                    <div
+                      className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4`}
+                    >
                       {step.images.map((image: any, idx: number) => (
                         <div
                           key={idx}
-                          className="aspect-square overflow-hidden rounded-lg relative"
+                          className={`aspect-square overflow-hidden rounded-lg relative ${
+                            image === Process27
+                              ? "col-span-2 mt-10 mb-0 pb-0"
+                              : ""
+                          }`}
                         >
                           <Image
                             src={image || "/placeholder.svg"}
