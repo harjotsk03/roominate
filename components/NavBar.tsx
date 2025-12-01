@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import NavButton from "./NavButton";
 import Image from "next/image";
 import Logo from "../assets/logo.png";
@@ -9,12 +9,15 @@ import { CircleUserRound, FigmaIcon, FileText, Menu, X } from "lucide-react";
 
 export default function NavBar() {
   const router = useRouter();
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
   const navigate = (path: string) => {
     router.push(path);
     setOpen(false);
   };
+
+  const isActive = (path: string) => pathname === path;
 
   return (
     <nav className="fixed top-0 left-0 z-50 w-full bg-white border-b lg:border-none">
@@ -39,7 +42,9 @@ export default function NavBar() {
             text={
               <>
                 <FileText size={15} className="-mt-0.5" />
-                <p>Process</p>
+                <p className={isActive("/process") ? "text-black" : ""}>
+                  Process
+                </p>
               </>
             }
           />
@@ -48,7 +53,7 @@ export default function NavBar() {
             text={
               <>
                 <CircleUserRound size={15} className="-mt-0.5" />
-                <p>Team</p>
+                <p className={isActive("/team") ? "text-black" : ""}>Team</p>
               </>
             }
           />
@@ -57,7 +62,9 @@ export default function NavBar() {
             text={
               <>
                 <FigmaIcon size={15} className="-mt-0.5" />
-                <p>Prototype</p>
+                <p className={isActive("/prototype") ? "text-black" : ""}>
+                  Prototype
+                </p>
               </>
             }
           />
@@ -78,14 +85,18 @@ export default function NavBar() {
         <div className="md:hidden bg-white border-t shadow-sm">
           <button
             onClick={() => navigate("/process")}
-            className="w-full px-6 py-4 flex items-center gap-3 hover:bg-gray-100"
+            className={`w-full px-6 py-4 flex items-center gap-3 hover:bg-gray-100 ${
+              isActive("/process") ? "text-black font-semibold" : ""
+            }`}
           >
             <FileText size={18} />
             <span>Process</span>
           </button>
           <button
             onClick={() => navigate("/prototype")}
-            className="w-full px-6 py-4 flex items-center gap-3 hover:bg-gray-100"
+            className={`w-full px-6 py-4 flex items-center gap-3 hover:bg-gray-100 ${
+              isActive("/prototype") ? "text-black font-semibold" : ""
+            }`}
           >
             <FigmaIcon size={18} />
             <span>Prototype</span>
